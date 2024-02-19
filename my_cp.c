@@ -105,5 +105,8 @@ int main(int argc, char *argv[])
         fwrite(buffer, sizeof(char), char_leidos, fdestination);            // Escribir en destination
     } while (char_leidos != 0);                                             // Mientras se lea algun elemento (Char) escribimos en el fichero
 
+    fclose(fsource);
+    fclose(fdestination);
+
     return 0; // exito
 }
